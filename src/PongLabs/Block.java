@@ -7,7 +7,6 @@ import java.awt.Color;
 import java.awt.Graphics;
 
 public class Block implements Locatable {
-
     private int xPos;
     private int yPos;
     private int width;
@@ -16,10 +15,27 @@ public class Block implements Locatable {
     private Color color;
 
     public Block() {
-
+        xPos = 100;
+        yPos = 150;
+        width = 10;
+        height = 10;
+        color = Color.BLACK;
     }
-
+    public Block(int x, int y)
+    {
+        xPos = x;
+        yPos = y;
+        color = Color.BLACK;
+    }
     //add other Block constructors - x , y , width, height, color
+    public Block(int x, int y, int w, int h)
+    {
+        xPos = x;
+        yPos = y;
+        width = w;
+        height = h;
+        color = Color.BLACK;
+    }
     public Block(int x, int y, int w, int h, Color c)
     {
         xPos = x;
@@ -62,15 +78,20 @@ public class Block implements Locatable {
 
     public boolean equals(Object obj) {
         Block test = (Block)obj;
-        if(this.getColor.Equals(null) && test.getColor.Equals(null))
+        if(this.getColor()!=null || test.getColor()!=null)
         {
-            
+            if(this.getX() == test.getX() && this.getY() == test.getY() && this.getWidth() == test.getWidth()&& this.getHeight() == test.getHeight()&& this.getColor() == test.getColor())
+            {
+                return true;
+            }
         }
-        if(this.getX() == test.getX && this.getY() == test.getY() && this.getWidth() == test.getWidth()&& this.getHeight() == test.getHeight()&& this.getColor() == test.getColor())
+        else
         {
-            return true;
+            if(this.getX() == test.getX() && this.getY() == test.getY() && this.getWidth() == test.getWidth()&& this.getHeight() == test.getHeight())
+            {
+                return true;
+            }
         }
-        
         return false;
     }
 
