@@ -53,16 +53,19 @@ public class Ball extends Block {
     }
     public void moveAndDraw(Graphics window) {
    	//draw a white ball at old ball location
-
+        draw(window, Color.WHITE);
         setX(getX() + getxSpeed());
 		//setY
+        setY(getY() + getySpeed());
 
         //draw the ball at its new location
+        draw(window);
     }
 
     public boolean equals(Object obj) {
         Ball test = (Ball)obj;
         return (super.equals(obj) && this.getxSpeed() == test.getxSpeed() && this.getySpeed()==test.getySpeed());
+
     }
 
    //add the get methods
