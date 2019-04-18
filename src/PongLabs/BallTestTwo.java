@@ -25,9 +25,9 @@ class BallTestTwo extends Canvas implements Runnable
 
 		//test the Ball thoroughly
                 ball = new Ball(50, 50);
-		ball = new Ball(50, 50, 20, 20);
-		ball = new Ball(50, 50, 50, 50, Color.BLUE);
-		ball = new Ball(50, 50, 80, 80, Color.BLUE, 4, 4);
+		ball = new Ball(50, 50, 10, 10);
+		ball = new Ball(50, 50, 10, 10, Color.BLUE);
+		ball = new Ball(50, 50, 10, 10, Color.BLUE, 4, 4);
 
 		//test all constructors
 

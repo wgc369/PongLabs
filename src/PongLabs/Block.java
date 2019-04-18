@@ -25,6 +25,8 @@ public class Block implements Locatable {
     {
         xPos = x;
         yPos = y;
+        width = 10;
+        height = 10;
         color = Color.BLACK;
     }
     //add other Block constructors - x , y , width, height, color
