@@ -19,22 +19,22 @@ class BlinkyBall extends Ball
 
    public BlinkyBall(int x, int y)
    {
-
+       super(x,y);
 
 
    }
 
    public BlinkyBall(int x, int y, int wid, int ht)
    {
-
+       super(x,y,wid,ht);
 
 
    }
 
    public BlinkyBall(int x, int y, int wid, int ht, int xSpd, int ySpd)
    {
-
-
+       
+       super(x,y,wid,ht,c,xSpd,ySpd);
 
    }
 
